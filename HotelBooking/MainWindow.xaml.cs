@@ -22,7 +22,7 @@ namespace HotelBooking
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();//nihao
         }
     }
 }
