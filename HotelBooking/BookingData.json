@@ -1,0 +1,90 @@
+﻿{
+  "facilities": [
+    {
+      "hotelRooms": [
+        {
+          "roomType": "Deluxe Room",
+          "availability": 120,
+          "cost": 200
+        },
+        {
+          "roomType": "Premium Room",
+          "availability": 80,
+          "cost": 250
+        },
+        {
+          "roomType": "Family Room",
+          "availability": 50,
+          "cost": 300
+        },
+        {
+          "roomType": "VIP Room",
+          "availability": 30,
+          "cost": 400
+        }
+      ]
+    },
+    {
+      "suites": [
+        {
+          "suiteType": "Deluxe Suite",
+          "availability": 50,
+          "cost": 400
+        },
+        {
+          "suiteType": "Premir Suite",
+          "availability": 35,
+          "cost": 500
+        },
+        {
+          "suiteType": "Grand Suite"
+          "availability": 15,
+          "cost": 635
+        }
+      ]
+    },
+    {
+      "BallRooms": [
+        {
+          "ballroomType": "Wedding Ballroom",
+          "availability": 10,
+          "cost": 444
+        },
+        {
+          "ballroomType": "Large Ballroom",
+          "availability": 5,
+          "cost": 500
+        },
+        {
+          "ballroomType": "Grand Ballroom",
+          "availability": 3,
+          "cost": 555
+        }
+      ]
+    },
+    {
+      "Dining": [
+        {
+          "restrauntType": "Western Buffet",
+          "seatsAvailable": 75,
+          "cost": 105
+        },
+        {
+          "restrauntType": "Local Cuisine Buffet",
+          "seatsAvailable": 85,
+          "cost": 75
+        },
+        {
+          "restrauntType": "Chinese Buffet",
+          "seatsAvailable": 100,
+          "cost": 88
+        },
+        {
+          "restrauntType": "Japanese Cuisine Buffet",
+          "seatsAvailable": 55,
+          "cost": 99
+        }
+      ]
+    }
+  ]
+}
