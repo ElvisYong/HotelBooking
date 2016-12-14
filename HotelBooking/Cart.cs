@@ -10,7 +10,7 @@ namespace HotelBooking
     {
         private static void InitializeShoppingCart()
         {
-
+            //test
         }
     }
 }
