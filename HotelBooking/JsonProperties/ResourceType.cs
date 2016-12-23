@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HotelBooking.JsonProperties
+{
+    class ResourceType
+    {
+        public List<HotelResource> hotelRooms { get; set; }
+        public List<SuiteResource> suites { get; set; }
+        public List<BallRoomResource> ballRooms { get; set; }
+        public List<DiningResource> dining { get; set; }
+    }
+}

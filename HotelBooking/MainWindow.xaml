@@ -19,6 +19,6 @@
             <Button x:Name="BtnDining" Content="Dining" Margin="0,10,0,0" Click="BtnDining_Click"/>
             <Button x:Name="Popular" Content="Popular" Margin="0,10,0,0" Click="Popular_Click"/>
         </StackPanel>
-        <Frame x:Name="Main" Margin="90,25,9.6,25.4"/>
+        <Frame x:Name="Main" Margin="105,25,-0.4,0.4" Navigated="Main_Navigated_1"/>
     </Grid>
 </Window>

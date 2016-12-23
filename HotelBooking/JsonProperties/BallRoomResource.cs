@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelBooking
+namespace HotelBooking.JsonProperties
 {
-    class Resource
+    class BallRoomResource
     {
-        public string facilityName { get; set; }
+        public string ballroomType { get; set; }
         public int availability { get; set; }
         public int cost { get; set; }
     }

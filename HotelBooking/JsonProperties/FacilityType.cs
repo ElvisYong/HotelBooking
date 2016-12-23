@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelBooking
+namespace HotelBooking.JsonProperties
 {
-    class Cart
+    class FacilityType
     {
-        private static void InitializeShoppingCart()
-        {
-            //test
-        }
+        public List<ResourceType> facilities { get; set; }
     }
 }

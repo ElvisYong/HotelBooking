@@ -37,14 +37,14 @@
           "cost": 500
         },
         {
-          "suiteType": "Grand Suite"
+          "suiteType": "Grand Suite",
           "availability": 15,
           "cost": 635
         }
       ]
     },
     {
-      "BallRooms": [
+      "ballRooms": [
         {
           "ballroomType": "Wedding Ballroom",
           "availability": 10,
@@ -63,25 +63,25 @@
       ]
     },
     {
-      "Dining": [
+      "dining": [
         {
           "restrauntType": "Western Buffet",
-          "seatsAvailable": 75,
+          "availability": 75,
           "cost": 105
         },
         {
           "restrauntType": "Local Cuisine Buffet",
-          "seatsAvailable": 85,
+          "availability": 85,
           "cost": 75
         },
         {
           "restrauntType": "Chinese Buffet",
-          "seatsAvailable": 100,
+          "availability": 100,
           "cost": 88
         },
         {
           "restrauntType": "Japanese Cuisine Buffet",
-          "seatsAvailable": 55,
+          "availability": 55,
           "cost": 99
         }
       ]
