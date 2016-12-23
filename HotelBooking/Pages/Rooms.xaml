@@ -6,8 +6,9 @@
       xmlns:local="clr-namespace:HotelBooking.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Rooms">
+      Title="Page1">
 
-    <Grid VerticalAlignment="Center">
+    <Grid>
+        <TextBlock>Rooms</TextBlock>
     </Grid>
 </Page>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace HotelBooking.Pages
 {
     /// <summary>
-    /// Interaction logic for BallRooms.xaml
+    /// Interaction logic for Ballrooms.xaml
     /// </summary>
-    public partial class BallRooms : Page
+    public partial class Ballrooms : Page
     {
-        public BallRooms()
+        public Ballrooms()
         {
             InitializeComponent();
         }

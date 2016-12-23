@@ -5,20 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelBooking"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1000">
+        Title="Grandtel Booking Appl" Height="700" Width="1000">
     <Grid>
-        <StackPanel Orientation="Horizontal" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button x:Name="BtnBooking" Content="Booking" Height="20" VerticalAlignment="Top" Click="BtnBooking_Click"/>
-            <Button x:Name="BtnCart" Content="Cart" Click="BtnCart_Click"/>
-            <Button x:Name="BtnInfo" Content="My Information" Click="BtnInfo_Click"/>
-        </StackPanel>
-        <StackPanel Orientation="Vertical" Width="100" HorizontalAlignment="Left" Margin="0,25,0,0">
-            <Button x:Name="BtnRooms" Content="Rooms" Click="BtnRooms_Click"/>
-            <Button x:Name="BtnSuites" Content="Suites" Margin="0,10,0,0" Click="BtnSuites_Click"/>
-            <Button x:Name="BtnBallRooms" Content="BallRooms" Margin="0,10,0,0" Click="BtnBallRooms_Click"/>
-            <Button x:Name="BtnDining" Content="Dining" Margin="0,10,0,0" Click="BtnDining_Click"/>
-            <Button x:Name="Popular" Content="Popular" Margin="0,10,0,0" Click="Popular_Click"/>
-        </StackPanel>
-        <Frame x:Name="Main" Margin="105,25,-0.4,0.4" Navigated="Main_Navigated_1"/>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="50" Width="80">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Booking</TextBlock>
+                    </Grid>
+                </TabItem.Header>
+                <Grid>
+                    <TabControl TabStripPlacement="Left">
+                        <TabItem x:Name="Rooms" MouseUp="Rooms_MouseUp">
+                            <TabItem.Header>
+                                <Grid Height="50" Width="80">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Rooms</TextBlock>
+                                </Grid>
+                            </TabItem.Header>
+                        </TabItem>
+                        <TabItem x:Name="Suites" MouseUp="Suites_MouseUp">
+                            <TabItem.Header>
+                                <Grid Height="50" Width="80">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Suites</TextBlock>
+                                </Grid>
+                            </TabItem.Header>
+                        </TabItem>
+                        <TabItem x:Name="Ballroom" MouseUp="Ballroom_MouseUp">
+                            <TabItem.Header>
+                                <Grid Height="50" Width="80">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Ballroom</TextBlock>
+                                </Grid>
+                            </TabItem.Header>
+                        </TabItem>
+                    </TabControl>
+                    <Frame x:Name="Main" Margin="95,0,0,0" NavigationUIVisibility="Hidden"></Frame>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="50" Width="80">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Cart</TextBlock>
+                    </Grid>
+                </TabItem.Header>
+                <Grid>
+                    <TextBlock>Cart</TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <Grid Height="50" Width="80">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Profile</TextBlock>
+                    </Grid>
+                </TabItem.Header>
+                <Grid>
+                    <TextBlock>Profile</TextBlock>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

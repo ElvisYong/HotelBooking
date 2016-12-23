@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace HotelBooking.Pages
 {
     /// <summary>
-    /// Interaction logic for Rooms.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
     public partial class Rooms : Page
     {

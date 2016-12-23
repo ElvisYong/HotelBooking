@@ -9,6 +9,6 @@
       Title="Suites">
 
     <Grid>
-        
+        <TextBlock>Suites</TextBlock>
     </Grid>
 </Page>
