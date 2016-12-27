@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Newtonsoft.Json;
+using HotelBooking.Pages;
+
 namespace HotelBooking
 {
     /// <summary>
@@ -22,8 +25,11 @@ namespace HotelBooking
     {
         public MainWindow()
         {
+            //to deseralize the json file
+            string jsonReader = File.ReadAllText("BookingData.json");
+            JsonProperties.ResourceType resource = JsonConvert.DeserializeObject<JsonProperties.ResourceType>(jsonReader);
             InitializeComponent();
-            Main.Content = new Pages.Rooms();
+            Main.Content = new Rooms();
         }
 
         private void Rooms_MouseUp(object sender, MouseButtonEventArgs e)

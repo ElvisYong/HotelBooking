@@ -59,11 +59,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CartItem.cs" />
+    <Compile Include="JsonProperties\BallroomId.cs" />
     <Compile Include="JsonProperties\BallRoomResource.cs" />
     <Compile Include="JsonProperties\DiningResource.cs" />
-    <Compile Include="JsonProperties\FacilityType.cs" />
     <Compile Include="JsonProperties\ResourceType.cs" />
-    <Compile Include="JsonProperties\SuiteResource.cs" />
+    <Compile Include="JsonProperties\RoomId.cs" />
+    <Compile Include="JsonProperties\TableId.cs" />
+    <Compile Include="Popups\BookingDetailsNull.xaml.cs">
+      <DependentUpon>BookingDetailsNull.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,7 +91,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Suites.xaml">
+    <Page Include="Popups\BookingDetailsNull.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,9 +102,6 @@
     </Compile>
     <Compile Include="Pages\Rooms.xaml.cs">
       <DependentUpon>Rooms.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Suites.xaml.cs">
-      <DependentUpon>Suites.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

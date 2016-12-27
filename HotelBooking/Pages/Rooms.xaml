@@ -4,11 +4,18 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HotelBooking.Pages"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Page1">
 
     <Grid>
-        <TextBlock>Rooms</TextBlock>
+        <TextBlock><Run Text="Rooms"/><InlineUIContainer>
+                <DatePicker x:Name="entryBooking" SelectedDateFormat="Short" FirstDayOfWeek="Monday" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+            </InlineUIContainer><InlineUIContainer>
+                <Button x:Name="button" Content="Button" Width="75" Click="button_Click"/>
+            </InlineUIContainer><InlineUIContainer>
+                <DatePicker x:Name="exitBooking" SelectedDateFormat="Short" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+            </InlineUIContainer></TextBlock>
     </Grid>
 </Page>

@@ -10,19 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelBooking.Pages
+namespace HotelBooking.Popups
 {
     /// <summary>
-    /// Interaction logic for Suites.xaml
+    /// Interaction logic for BookingEntryNull.xaml
     /// </summary>
-    public partial class Suites : Page
+    public partial class BookingEntryNull : Window
     {
-        public Suites()
+        public BookingEntryNull()
         {
             InitializeComponent();
+        }
+
+        private void btnClose_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

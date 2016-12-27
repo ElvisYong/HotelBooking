@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace HotelBooking.JsonProperties
 {
-    class SuiteResource
+    class BallroomId
     {
-        public string suiteType { get; set; }
-        public int availability { get; set; }
-        public int cost { get; set; }
+        public int id { get; set; }
     }
 }

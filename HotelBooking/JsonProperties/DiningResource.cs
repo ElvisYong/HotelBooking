@@ -9,6 +9,7 @@ namespace HotelBooking.JsonProperties
     class DiningResource
     {
         public string restrauntType { get; set; }
+        public List<TableId> tableId { get; set; }
         public int availability { get; set; }
         public int cost { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelBooking.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace HotelBooking.Pages
         public Rooms()
         {
             InitializeComponent();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {   //if either booking entry or exit date not selected, user is prompted with a new window to alert them
+            if (entryBooking.SelectedDate == null || exitBooking.SelectedDate == null)
+            {
+                Popups.BookingEntryNull popup = new Popups.BookingEntryNull();
+                popup.Show();
+            }
+            else if()
+            {
+
+            }
         }
     }
 }
