@@ -69,6 +69,9 @@
     <Compile Include="Popups\BookingDetailsNull.xaml.cs">
       <DependentUpon>BookingDetailsNull.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Popups\BookingFull.xaml.cs">
+      <DependentUpon>BookingFull.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShoppingCart.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Popups\BookingDetailsNull.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popups\BookingFull.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

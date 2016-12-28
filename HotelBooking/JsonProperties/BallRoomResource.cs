@@ -11,6 +11,6 @@ namespace HotelBooking.JsonProperties
         public string ballroomType { get; set; }
         public List<BallroomId> ballroomId { get; set; }
         public int availability { get; set; }
-        public int cost { get; set; }
+        public double cost { get; set; }
     }
 }

@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace HotelBooking
 {
-    class CartItem: JsonProperties.ResourceType
+    class CartItem
     {
-        public CartItem() : base()
+        public DateTime BookingStart { get; set; }
+        public DateTime BookingEnd { get; set; }
+        public string itemName { get; set; }
+        public double cost { get; set; }
+        public double subTotal
         {
-            
+            get
+            {
+                return ((BookingEnd - BookingStart).TotalDays) * cost;
+            }
         }
     }
 }

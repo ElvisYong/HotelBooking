@@ -23,13 +23,6 @@
                                 </Grid>
                             </TabItem.Header>
                         </TabItem>
-                        <TabItem x:Name="Suites" MouseUp="Suites_MouseUp">
-                            <TabItem.Header>
-                                <Grid Height="50" Width="80">
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Suites</TextBlock>
-                                </Grid>
-                            </TabItem.Header>
-                        </TabItem>
                         <TabItem x:Name="Ballroom" MouseUp="Ballroom_MouseUp">
                             <TabItem.Header>
                                 <Grid Height="50" Width="80">
@@ -48,7 +41,7 @@
                     </Grid>
                 </TabItem.Header>
                 <Grid>
-                    <TextBlock>Cart</TextBlock>
+                    <TextBlock x:Name="CartTxt"></TextBlock>
                 </Grid>
             </TabItem>
             <TabItem>
