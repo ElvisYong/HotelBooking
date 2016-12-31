@@ -59,20 +59,33 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CartItem.cs" />
-    <Compile Include="JsonProperties\BallroomId.cs" />
-    <Compile Include="JsonProperties\BallRoomResource.cs" />
-    <Compile Include="JsonProperties\DiningResource.cs" />
-    <Compile Include="JsonProperties\ResourceType.cs" />
-    <Compile Include="JsonProperties\RoomId.cs" />
-    <Compile Include="JsonProperties\TableId.cs" />
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\BallroomId.cs" />
+    <Compile Include="Models\BallRoomResource.cs" />
+    <Compile Include="Models\DiningResource.cs" />
+    <Compile Include="Models\ResourceType.cs" />
+    <Compile Include="Models\RoomId.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\TableId.cs" />
+    <Compile Include="Pages\BallroomsPage.xaml.cs">
+      <DependentUpon>BallroomsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CartPage.xaml.cs">
+      <DependentUpon>CartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RoomsPage.xaml.cs">
+      <DependentUpon>RoomsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Popups\BookingDetailsNull.xaml.cs">
       <DependentUpon>BookingDetailsNull.xaml</DependentUpon>
     </Compile>
     <Compile Include="Popups\BookingFull.xaml.cs">
       <DependentUpon>BookingFull.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ShoppingCart.cs" />
+    <Compile Include="Popups\DateError.xaml.cs">
+      <DependentUpon>DateError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,16 +94,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="JsonProperties\HotelResource.cs" />
+    <Compile Include="Models\HotelResource.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Ballrooms.xaml">
+    <Page Include="Pages\BallroomsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Rooms.xaml">
+    <Page Include="Pages\CartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RoomsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -102,14 +119,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Popups\DateError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Ballrooms.xaml.cs">
-      <DependentUpon>Ballrooms.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Rooms.xaml.cs">
-      <DependentUpon>Rooms.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelBooking.JsonProperties
+namespace HotelBooking.Models
 {
-    class TableId
+    public class TableId
     {
         public int id { get; set; }
     }

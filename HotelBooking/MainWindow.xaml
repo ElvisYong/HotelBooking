@@ -11,17 +11,21 @@
             <TabItem>
                 <TabItem.Header>
                     <Grid Height="50" Width="80">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Booking</TextBlock>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="Booking"/><InlineUIContainer>
+                                <DataGrid x:Name="dataGrid"/>
+                            </InlineUIContainer></TextBlock>
                     </Grid>
                 </TabItem.Header>
                 <Grid>
                     <TabControl TabStripPlacement="Left">
-                        <TabItem x:Name="Rooms" MouseUp="Rooms_MouseUp">
+                        <TabItem x:Name="Rooms" MouseUp="Rooms_MouseUp" Margin="0,0,-2.2,-4.4">
                             <TabItem.Header>
                                 <Grid Height="50" Width="80">
-                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Rooms</TextBlock>
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,17,22,17">Rooms</TextBlock>
                                 </Grid>
                             </TabItem.Header>
+                            <Grid>
+                            </Grid>
                         </TabItem>
                         <TabItem x:Name="Ballroom" MouseUp="Ballroom_MouseUp">
                             <TabItem.Header>
@@ -29,20 +33,20 @@
                                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Ballroom</TextBlock>
                                 </Grid>
                             </TabItem.Header>
+                            <Grid>
+                            </Grid>
                         </TabItem>
                     </TabControl>
-                    <Frame x:Name="Main" Margin="95,0,0,0" NavigationUIVisibility="Hidden"></Frame>
+                    <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="96,0,0,0.8"/>
                 </Grid>
             </TabItem>
-            <TabItem>
+            <TabItem MouseUp="TabItem_MouseUp">
                 <TabItem.Header>
                     <Grid Height="50" Width="80">
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Cart</TextBlock>
                     </Grid>
                 </TabItem.Header>
-                <Grid>
-                    <TextBlock x:Name="CartTxt"></TextBlock>
-                </Grid>
+                <Frame x:Name="CartFrame" NavigationUIVisibility="Hidden"/>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
@@ -50,9 +54,6 @@
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Profile</TextBlock>
                     </Grid>
                 </TabItem.Header>
-                <Grid>
-                    <TextBlock>Profile</TextBlock>
-                </Grid>
             </TabItem>
         </TabControl>
     </Grid>

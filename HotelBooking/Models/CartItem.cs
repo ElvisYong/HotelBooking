@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelBooking
+namespace HotelBooking.Models
 {
-    class CartItem
+    public class CartItem
     {
         public DateTime BookingStart { get; set; }
         public DateTime BookingEnd { get; set; }
@@ -16,7 +16,7 @@ namespace HotelBooking
         {
             get
             {
-                return ((BookingEnd - BookingStart).TotalDays) * cost;
+                return ((BookingEnd - BookingStart).TotalDays + 1) * cost;
             }
         }
     }
