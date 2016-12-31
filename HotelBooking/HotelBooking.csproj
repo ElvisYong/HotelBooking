@@ -64,6 +64,17 @@
     <Compile Include="JsonProperties\FacilityType.cs" />
     <Compile Include="JsonProperties\ResourceType.cs" />
     <Compile Include="JsonProperties\SuiteResource.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms\Classic.xaml.cs">
+      <DependentUpon>Classic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeManager.cs" />
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,24 +92,44 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Buffets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Rooms.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Suites.xaml">
+    <Page Include="Rooms\Classic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\BubbleGum.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Sky.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Forest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Night.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\Ballrooms.xaml.cs">
       <DependentUpon>Ballrooms.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Buffets.xaml.cs">
+      <DependentUpon>Buffets.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Rooms.xaml.cs">
       <DependentUpon>Rooms.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Suites.xaml.cs">
-      <DependentUpon>Suites.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -113,10 +144,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Resource Include="Logo\GrandtelLogo.jpg" />
+    <Resource Include="RoomPictures\PretigeRoom.jpg" />
+    <Resource Include="RoomPictures\DeluxeRoom.jpg" />
+    <Resource Include="RoomPictures\ClassicRoom.jpg" />
+    <Resource Include="BuffetPictures\Italian.jpg" />
+    <Resource Include="BuffetPictures\ClassicBuffet.jpg" />
+    <Resource Include="BuffetPictures\Chinese.jpg" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="BallroomPictures\TheGolden.jpg" />
+    <Resource Include="BallroomPictures\TheVintage.jpg" />
+    <Resource Include="BallroomPictures\TheWillow.jpg" />
     <Content Include="BookingData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -130,6 +171,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

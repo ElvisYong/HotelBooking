@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HotelBooking.Pages
+namespace HotelBooking.Rooms
 {
     /// <summary>
-    /// Interaction logic for Suites.xaml
+    /// Interaction logic for Classic.xaml
     /// </summary>
-    public partial class Suites : Page
+    public partial class Classic : Page
     {
-        public Suites()
+        public Classic()
         {
             InitializeComponent();
         }

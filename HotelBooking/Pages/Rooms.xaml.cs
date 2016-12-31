@@ -24,5 +24,11 @@ namespace HotelBooking.Pages
         {
             InitializeComponent();
         }
+
+        private void ClassicRoom_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService ns = NavigationService.GetNavigationService(this);
+            ns.Navigate(new Uri("/HotelBooking;component/Rooms/Classic.xaml", UriKind.Relative));
+        }
     }
 }

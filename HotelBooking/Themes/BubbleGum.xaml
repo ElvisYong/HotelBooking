@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="Backdrop" Color="Maroon" />
+    <SolidColorBrush x:Key="FrameBackground" Color="LightPink" />
+    <SolidColorBrush x:Key="FrameHeaderTextColor" Color="#B22222" />
+    <SolidColorBrush x:Key="FrameTextColor" Color="Black" />
+    <SolidColorBrush x:Key="TabTextColor" Color="Black" />
+    <SolidColorBrush x:Key="TabSelectedTextColor" Color="White" />
+</ResourceDictionary>

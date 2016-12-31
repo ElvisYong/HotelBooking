@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace HotelBooking.Pages
 {
     /// <summary>
-    /// Interaction logic for Ballrooms.xaml
+    /// Interaction logic for Buffets.xaml
     /// </summary>
-    public partial class Ballrooms : Page
+    public partial class Buffets : Page
     {
-        public Ballrooms()
+        public Buffets()
         {
             InitializeComponent();
-        }
-
-        private void Golden_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            NavigationService ns = NavigationService.GetNavigationService(this);
-            ns.Navigate(new Uri("/HotelBooking;component/Pages/Buffets.xaml", UriKind.Relative));
         }
     }
 }

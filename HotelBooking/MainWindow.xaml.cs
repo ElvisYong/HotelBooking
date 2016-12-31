@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
 namespace HotelBooking
 {
     /// <summary>
@@ -20,25 +9,37 @@ namespace HotelBooking
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static ThemeManager manager = new ThemeManager();
+        Page rooms = new Pages.Rooms();
+        Page ballrooms = new Pages.Ballrooms();
+        Page buffets = new Pages.Buffets();
+
         public MainWindow()
         {
             InitializeComponent();
-            Main.Content = new Pages.Rooms();
+            Main.Source = new Uri("/HotelBooking;component/Pages/Rooms.xaml", UriKind.Relative);
+            cboTheme.ItemsSource = manager.CapitalThemeNameList;
+            cboTheme.SelectedItem = Login.themeName;
         }
 
         private void Rooms_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Main.Content = new Pages.Rooms();
-        }
-
-        private void Suites_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            Main.Content = new Pages.Suites();
+            Main.Source = new Uri("/HotelBooking;component/Pages/Rooms.xaml", UriKind.Relative);
         }
 
         private void Ballroom_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Main.Content = new Pages.Ballrooms();
+            Main.Source = new Uri("/HotelBooking;component/Pages/Ballrooms.xaml", UriKind.Relative);
+        }
+
+        private void Buffet_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Main.Source = new Uri("/HotelBooking;component/Pages/Buffets.xaml", UriKind.Relative);
+        }
+
+        private void cboTheme_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            manager.SetTheme(cboTheme.SelectedValue.ToString().ToLower());
         }
     }
 }

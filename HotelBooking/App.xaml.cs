@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace HotelBooking
 {
@@ -13,5 +7,19 @@ namespace HotelBooking
     /// </summary>
     public partial class App : Application
     {
+        private Login login = new Login();
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            login.CloseEvent += Login_CloseEvent;
+            login.Show();
+        }
+
+        private void Login_CloseEvent()
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            login.Close();
+        }
     }
 }

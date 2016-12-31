@@ -1,0 +1,33 @@
+﻿<Window x:Class="HotelBooking.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelBooking"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Grandtel Booking Application" MinHeight="500" MinWidth="500" MaxHeight="500" MaxWidth="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Source="Logo/GrandtelLogo.jpg" Grid.ColumnSpan="2"/>
+        <Label x:Name="ErrorMessage" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" Foreground="Red" Visibility="Hidden">Incorrect username or password!</Label>
+        <Label Grid.Row="2" HorizontalContentAlignment="Right">Username:</Label>
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Width="300" Grid.Row="2" Grid.Column="1" KeyDown="EnterPressed"></TextBox>
+        <Label Grid.Row="3" HorizontalContentAlignment="Right">Password:</Label>
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Width="300" Grid.Row="3" Grid.Column="1" KeyDown="EnterPressed"></PasswordBox>
+        <Label Grid.Row="4" HorizontalContentAlignment="Right">Start-up Theme:</Label>
+        <ComboBox x:Name="LoginCboBox" HorizontalAlignment="Left" Width="300" SelectionChanged="LoginCboBox_SelectionChanged" Grid.Column="1" Grid.Row="4"/>
+        <Button x:Name="LoginButton" Content="Login" Grid.Row="5" Grid.ColumnSpan="2" Width="70" Height="30" Margin="10" Click="LoginButton_Click"/>
+    </Grid>
+</Window>
