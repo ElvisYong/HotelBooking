@@ -52,12 +52,12 @@ namespace HotelBooking.Pages
                 }
             }
         }
-        
+
         private void ClassicRoomButton_Click(object sender, RoutedEventArgs e)
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
-            int facilityId = 0;
+            int breaker = 0;
             foreach (var item in MainWindow.resource.hotelRooms)
             {
                 if (item.roomType.Equals("Classic Room"))
@@ -71,7 +71,7 @@ namespace HotelBooking.Pages
                                 if (start.dates == null && end.dates == null)
                                 {
                                     bookingFull = false;
-                                    facilityId = ids.id;
+                                    breaker = 1;
                                     break;
                                 }
                                 else if (ClassicRoomBookingStart.SelectedDate.Equals(start.dates)
@@ -83,7 +83,8 @@ namespace HotelBooking.Pages
                                 }
                             }
                         }
-                        if (facilityId > 0) break;
+                        if (breaker == 1)
+                            break;
                     }
                 }
             }
@@ -113,12 +114,11 @@ namespace HotelBooking.Pages
                 {
                     itemName = classicRoomName,
                     BookingStart = ClassicRoomBookingStart.SelectedDate.Value,
-                    BookingEnd = ClassicRoomBookingStart.SelectedDate.Value,
+                    BookingEnd = ClassicRoomBookingEnd.SelectedDate.Value,
                     cost = classicRoomCost,
-                    itemId = facilityId
+                    itemImage = "string" //Add image source
                 };
                 MainWindow.Cart.Add(Item);
-                ClassicRoomButton.IsEnabled = false;
             }
         }
 
@@ -126,7 +126,7 @@ namespace HotelBooking.Pages
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
-            int facilityId = 0;
+            int breaker = 0;
             foreach (var item in MainWindow.resource.hotelRooms)
             {
                 if (item.roomType.Equals("Deluxe Room"))
@@ -140,7 +140,6 @@ namespace HotelBooking.Pages
                                 if (start.dates == null && end.dates == null)
                                 {
                                     bookingFull = false;
-                                    facilityId = ids.id;
                                     break;
                                 }
                                 else if (DeluxeRoomBookingEnd.SelectedDate.Equals(start.dates)
@@ -152,7 +151,8 @@ namespace HotelBooking.Pages
                                 }
                             }
                         }
-                        if (facilityId > 0) break;
+                        if (breaker == 1)
+                            break;
                     }
                 }
             }
@@ -183,7 +183,7 @@ namespace HotelBooking.Pages
                     BookingStart = DeluxeRoomBookingStart.SelectedDate.Value,
                     BookingEnd = DeluxeRoomBookingEnd.SelectedDate.Value,
                     cost = deluxeRoomCost,
-                    itemId = facilityId
+                    itemImage = "string"
                 };
                 MainWindow.Cart.Add(Item);
                 DeluxeRoomButton.IsEnabled = false;
@@ -194,7 +194,7 @@ namespace HotelBooking.Pages
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
-            int facilityId = 0;
+            int breaker = 1;
             foreach (var item in MainWindow.resource.hotelRooms)
             {
                 if (item.roomType.Equals("Prestige Room"))
@@ -208,7 +208,7 @@ namespace HotelBooking.Pages
                                 if (start.dates == null && end.dates == null)
                                 {
                                     bookingFull = false;
-                                    facilityId = ids.id;
+                                    breaker = 1;
                                     break;
                                 }
                                 else if (PrestigeRoomBookingStart.SelectedDate.Equals(start.dates)
@@ -220,7 +220,7 @@ namespace HotelBooking.Pages
                                 }
                             }
                         }
-                        if (facilityId > 0) break;
+                        if (breaker == 1) break;
                     }
                 }
             }
@@ -251,20 +251,11 @@ namespace HotelBooking.Pages
                     BookingStart = PrestigeRoomBookingStart.SelectedDate.Value,
                     BookingEnd = PrestigeRoomBookingEnd.SelectedDate.Value,
                     cost = prestigeRoomCost,
-                    itemId = facilityId
+                    itemImage = "string" //Add image source
                 };
                 MainWindow.Cart.Add(Item);
                 PrestigeRoomButton.IsEnabled = false;
             }
         }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow.Cart.Clear();
-            ClassicRoomButton.IsEnabled = true;
-            DeluxeRoomButton.IsEnabled = true;
-            PrestigeRoomButton.IsEnabled = true;
-        }
-
     }
 }

@@ -13,6 +13,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
+                        <Image Source="{Binding itemImage}"/>
                         <TextBlock Text="{Binding itemName, StringFormat=Item name: {0}}"/>
                         <TextBlock Text="{Binding BookingStart, StringFormat=Booking start: {0:D}}"/>
                         <TextBlock Text="{Binding BookingEnd, StringFormat=Booking end: {0:D}}"/>

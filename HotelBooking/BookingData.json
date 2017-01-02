@@ -32,12 +32,12 @@
         {
           "bookingStart": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "bookingEnd": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "id": 3
@@ -45,12 +45,12 @@
         {
           "bookingStart": [
             {
-              "dates": null
+              "dates": "2017-01-03"
             }
           ],
           "bookingEnd": [
             {
-              "dates": null
+              "dates": "2017-01-03"
             }
           ],
           "id": 4
@@ -58,12 +58,12 @@
         {
           "bookingStart": [
             {
-              "dates": null
+              "dates": "2017-01-03"
             }
           ],
           "bookingEnd": [
             {
-              "dates": null
+              "dates": "2017-01-03"
             }
           ],
           "id": 5
@@ -71,12 +71,12 @@
         {
           "bookingStart": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "bookingEnd": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "id": 6
@@ -90,12 +90,12 @@
         {
           "bookingStart": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "bookingEnd": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "id": 7
@@ -281,81 +281,33 @@
       "restrauntType": "Western",
       "tableId": [
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 20
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 21
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 22
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 23
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 24
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 25
         }
       ],
@@ -365,81 +317,33 @@
       "restrauntType": "Chinese",
       "tableId": [
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 26
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 27
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 28
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 29
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 30
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 31
         }
       ],
@@ -449,81 +353,33 @@
       "restrauntType": "Italian",
       "tableId": [
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 32
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 33
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 34
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 35
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 36
         },
         {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
+          "bookingStart": null,
+          "bookingEnd": null,
           "id": 37
         }
       ],

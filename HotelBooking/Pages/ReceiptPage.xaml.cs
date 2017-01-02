@@ -16,6 +16,8 @@ using HotelBooking.Models;
 using System.Collections.ObjectModel;
 using System.IO;
 using Newtonsoft.Json;
+using System.Reflection;
+
 namespace HotelBooking.Pages
 {
     /// <summary>
@@ -34,11 +36,6 @@ namespace HotelBooking.Pages
         {
             MainWindow.Details.Clear();
             File.WriteAllText(@"C:\Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookedDetails.json", string.Empty);
-        }
-
-        private void PrintReceipt_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 

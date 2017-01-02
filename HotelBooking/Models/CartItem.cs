@@ -13,6 +13,7 @@ namespace HotelBooking.Models
         public string itemName { get; set; }
         public double cost { get; set; }
         public int itemId { get; set; }
+        public string itemImage { get; set; }
         public double subTotal
         {
             get

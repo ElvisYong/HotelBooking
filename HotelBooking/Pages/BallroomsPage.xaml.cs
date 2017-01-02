@@ -54,7 +54,7 @@ namespace HotelBooking.Pages
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
-            int facilityId = 0;
+            int breaker = 0;
             foreach (var item in MainWindow.resource.ballRooms)
             {
                 if (item.ballroomType.Equals("The Golden"))
@@ -68,7 +68,7 @@ namespace HotelBooking.Pages
                                 if (start.dates == null && end.dates == null)
                                 {
                                     bookingFull = false;
-                                    facilityId = ids.id;
+                                    breaker = 1;
                                     break;
                                 }
                                 else if (TheGoldenBookingStart.SelectedDate.Equals(start.dates)
@@ -80,7 +80,7 @@ namespace HotelBooking.Pages
                                 }
                             }
                         }
-                        if (facilityId > 0) break;
+                        if (breaker == 1) break;
                     }
                 }
             }
@@ -112,10 +112,9 @@ namespace HotelBooking.Pages
                     BookingStart = TheGoldenBookingStart.SelectedDate.Value,
                     BookingEnd = TheGoldenBookingEnd.SelectedDate.Value,
                     cost = theGoldenCost,
-                    itemId = facilityId
+                    itemImage = "string" //Add item source
                 };
                 MainWindow.Cart.Add(Item);
-                TheGoldenButton.IsEnabled = false;
             }
         }
 
@@ -123,7 +122,7 @@ namespace HotelBooking.Pages
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
-            int facilityId = 0;
+            int breaker = 0;
             foreach (var item in MainWindow.resource.ballRooms)
             {
                 if (item.ballroomType.Equals("The Vintage"))
@@ -137,7 +136,6 @@ namespace HotelBooking.Pages
                                 if (start.dates == null && end.dates == null)
                                 {
                                     bookingFull = false;
-                                    facilityId = ids.id;
                                     break;
                                 }
                                 else if (TheVintageBookingStart.SelectedDate.Equals(start.dates)
@@ -149,7 +147,7 @@ namespace HotelBooking.Pages
                                 }
                             }
                         }
-                        if (facilityId > 0) break;
+                        if (breaker == 1) break;
                     }
                 }
             }
@@ -181,10 +179,9 @@ namespace HotelBooking.Pages
                     BookingStart = TheVintageBookingStart.SelectedDate.Value,
                     BookingEnd = TheVintageBookingEnd.SelectedDate.Value,
                     cost = theVintageCost,
-                    itemId = facilityId
+                    itemImage = "string" //Add image source
                 };
                 MainWindow.Cart.Add(Item);
-                TheVintageButton.IsEnabled = false;
             }
         }
 
@@ -192,7 +189,7 @@ namespace HotelBooking.Pages
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
-            int facilityId = 0;
+            int breaker = 0;
             foreach (var item in MainWindow.resource.ballRooms)
             {
                 if (item.ballroomType.Equals("The Willow"))
@@ -206,7 +203,6 @@ namespace HotelBooking.Pages
                                 if (ids.bookingStart == null)
                                 {
                                     bookingFull = false;
-                                    facilityId = ids.id;
                                     break;
                                 }
                                 else if (TheWillowBookingStart.SelectedDate.Equals(start.dates)
@@ -218,7 +214,7 @@ namespace HotelBooking.Pages
                                 }
                             }
                         }
-                        if (facilityId > 0) break;
+                        if (breaker == 1) break;
                     }
                 }
             }
@@ -250,19 +246,10 @@ namespace HotelBooking.Pages
                     BookingStart = TheWillowBookingStart.SelectedDate.Value,
                     BookingEnd = TheWillowBookingEnd.SelectedDate.Value,
                     cost = theWillowCost,
-                    itemId = facilityId
+                    itemImage = "string"//Image source
                 };
                 MainWindow.Cart.Add(Item);
-                TheWillowButton.IsEnabled = false;
             }
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow.Cart.Clear();
-            TheGoldenButton.IsEnabled = true;
-            TheVintageButton.IsEnabled = true;
-            TheWillowButton.IsEnabled = true;
         }
     }
 }

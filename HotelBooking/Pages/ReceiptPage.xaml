@@ -26,6 +26,5 @@
         <TextBlock Name="ReceiptCostTB" HorizontalAlignment="Left" Margin="77,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock Name="totalCostTB" HorizontalAlignment="Left" Margin="77,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Clear receipt" HorizontalAlignment="Left" Margin="203,250,0,0" VerticalAlignment="Top" Width="78" Height="19" Click="button_Click"/>
-        <Button x:Name="PrintReceipt" Content="Print receipt" HorizontalAlignment="Right" Margin="0,225,19,0" VerticalAlignment="Top" Width="78" Click="PrintReceipt_Click"/>
     </Grid>
 </Page>

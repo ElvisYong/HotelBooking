@@ -18,6 +18,8 @@ using Newtonsoft.Json;
 using HotelBooking.Models;
 using System.Collections.ObjectModel;
 using HotelBooking.Pages;
+using System.Reflection;
+
 namespace HotelBooking
 {
     /// <summary>
@@ -26,9 +28,9 @@ namespace HotelBooking
     public partial class MainWindow : Window
     {
         //To deseralize the json file
-        public static ResourceType resource = JsonConvert.DeserializeObject<ResourceType>(File.ReadAllText(@"C:\Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookingData.json"));
+        public static ResourceType resource = JsonConvert.DeserializeObject<ResourceType>(File.ReadAllText(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "BookingData.json")));
         //Create a list of receipt that contains a list of object thus a list in a list.
-        public static ObservableCollection<ObservableCollection<Transaction>> Details = JsonConvert.DeserializeObject<ObservableCollection<ObservableCollection<Transaction>>>(File.ReadAllText(@"C:\Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookedDetails.json"));
+        public static ObservableCollection<ObservableCollection<Transaction>> Details = JsonConvert.DeserializeObject<ObservableCollection<ObservableCollection<Transaction>>>(File.ReadAllText(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "BookedDetails.json")));
        
         //instantiate Cart
         public static ObservableCollection<CartItem> Cart = new ObservableCollection<CartItem>();

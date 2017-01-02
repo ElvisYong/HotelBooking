@@ -61,6 +61,7 @@
     </ApplicationDefinition>
     <Compile Include="CustomDateConverter.cs" />
     <Compile Include="Models\BookingEnd.cs" />
+    <Compile Include="Models\Bookings.cs" />
     <Compile Include="Models\BookingStart.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\BallroomId.cs" />

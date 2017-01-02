@@ -17,6 +17,7 @@ using System.Collections.ObjectModel;
 using HotelBooking.Models;
 using Newtonsoft.Json;
 using System.IO;
+using System.Reflection;
 
 namespace HotelBooking.Pages
 {
@@ -45,7 +46,34 @@ namespace HotelBooking.Pages
             {
                 transaction = new ObservableCollection<Transaction>();
             }
-            
+
+            foreach(var item in MainWindow.Cart)
+            {
+                foreach(var res in MainWindow.resource.hotelRooms)
+                {
+                    if (item.itemName.Equals(res.roomType))
+                    {
+                        foreach(var ids in res.roomId)
+                        {
+                            foreach(var start in ids.bookingStart)
+                            {
+                                foreach(var end in ids.bookingEnd)
+                                {
+                                    if(start.dates == null && end.dates == null)
+                                    {
+                                        item.itemId = ids.id;
+                                        break;
+                                    }
+                                }
+                                break;
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+
             foreach (var item in MainWindow.Cart)
             {
                 transaction.Add(new Transaction
@@ -57,12 +85,12 @@ namespace HotelBooking.Pages
                     TransactionSubtotal = item.subTotal,
                 });
             }
-
+            
             //Add the list of transaction items into the list of receipts
             MainWindow.Details.Add(transaction);
             //Serialize objects into BookingDetails to store receipts
             string data = JsonConvert.SerializeObject(MainWindow.Details, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(@"C:\Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookedDetails.json", data);
+            File.WriteAllText(@"C: \Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookedDetails.json", data);
 
             foreach(var items in MainWindow.Cart)
             {
@@ -78,8 +106,8 @@ namespace HotelBooking.Pages
                                 {
                                     foreach (var end in ids.bookingEnd)
                                     {
-                                            start.dates = items.BookingStart;
-                                            end.dates = items.BookingEnd;
+                                        start.dates = items.BookingStart;
+                                        end.dates = items.BookingEnd;
                                     }
                                 } 
                             }
@@ -177,7 +205,7 @@ namespace HotelBooking.Pages
             }
             //edit BookingData json file to mark down dates booked
             string edited = JsonConvert.SerializeObject(MainWindow.resource, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText(@"C:\Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookingData.json", edited);
+            File.WriteAllText(@"C: \Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookingData.json", edited);
             //clear cart so if user adds new item into cart, no item duplicate
             MainWindow.Cart.Clear();
         }

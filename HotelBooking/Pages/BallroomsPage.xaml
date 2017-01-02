@@ -19,6 +19,5 @@
         <DatePicker x:Name="TheWillowBookingStart" HorizontalAlignment="Left" Margin="0,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.32,0.328" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
         <DatePicker x:Name="TheWillowBookingEnd" HorizontalAlignment="Left" Margin="102,83,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" />
         <Button x:Name="TheWillowButton" Content="Add to cart" HorizontalAlignment="Left" Margin="209,85,0,0" VerticalAlignment="Top" Width="75" Click="TheWillowButton_Click"/>
-        <Button x:Name="button" Content="Enable buttons" HorizontalAlignment="Left" Margin="201,158,0,0" VerticalAlignment="Top" Width="83" Click="button_Click"/>
     </Grid>
 </Page>
