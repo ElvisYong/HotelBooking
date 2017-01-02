@@ -10,7 +10,6 @@ namespace HotelBooking.Models
     {
         public string restrauntType { get; set; }
         public List<TableId> tableId { get; set; }
-        public int availability { get; set; }
         public double cost { get; set; }
     }
 }

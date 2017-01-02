@@ -48,12 +48,13 @@
                 </TabItem.Header>
                 <Frame x:Name="CartFrame" NavigationUIVisibility="Hidden"/>
             </TabItem>
-            <TabItem>
+            <TabItem MouseUp="TabItem_MouseUp_1">
                 <TabItem.Header>
                     <Grid Height="50" Width="80">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Profile</TextBlock>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Receipt</TextBlock>
                     </Grid>
                 </TabItem.Header>
+                <Frame x:Name="ReceiptFrame" NavigationUIVisibility="Hidden"/>
             </TabItem>
         </TabControl>
     </Grid>

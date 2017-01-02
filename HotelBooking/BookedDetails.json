@@ -1,0 +1,12 @@
+[
+  [
+    {
+      "ItemName": "Deluxe Room",
+      "TransactionBookingStart": "2017-01-02",
+      "TransactionBookingEnd": "2017-01-02",
+      "TransactionSubtotal": 200.0,
+      "TransactionId": 1,
+      "TransactionDateTime": "2017-01-02T08:44:08.8081725+08:00"
+    }
+  ]
+]

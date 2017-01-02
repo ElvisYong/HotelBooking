@@ -22,5 +22,6 @@
         <DatePicker x:Name="VipRoomBookingStart" HorizontalAlignment="Left" Margin="5,71,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
         <DatePicker x:Name="VipRoomBookingEnd" HorizontalAlignment="Left" Margin="107,71,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
         <Button x:Name="VipRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,73,0,0" VerticalAlignment="Top" Width="75" Click="VipRoomButton_Click"/>
+        <Button x:Name="button" Content="Enable buttons" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="191,208,0,0" Height="21" Click="button_Click"/>
     </Grid>
 </Page>

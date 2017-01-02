@@ -22,7 +22,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:Name="CheckOutBtn" Content="Check out" HorizontalAlignment="Right" MaxHeight="30px" Margin="0,226,30,54" Click="CheckOutBtn_Click"></Button>
+        <Button x:Name="CheckOutBtn" Content="Check out" HorizontalAlignment="Right" MaxHeight="30px" Margin="0,257,30,23" Click="CheckOutBtn_Click" Width="75"></Button>
         <TextBlock Name="totalCostTB" HorizontalAlignment="Left" Margin="77,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Clear cart" HorizontalAlignment="Left" Margin="195,228,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Page>

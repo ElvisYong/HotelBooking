@@ -12,6 +12,7 @@ namespace HotelBooking.Models
         public DateTime BookingEnd { get; set; }
         public string itemName { get; set; }
         public double cost { get; set; }
+        public int itemId { get; set; }
         public double subTotal
         {
             get
@@ -20,4 +21,5 @@ namespace HotelBooking.Models
             }
         }
     }
+
 }

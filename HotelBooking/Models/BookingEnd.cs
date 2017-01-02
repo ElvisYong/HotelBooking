@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 namespace HotelBooking.Models
 {
-    public class RoomId
+    public class BookingEnd
     {
-        public List<BookingStart> bookingStart { get; set; }
-        public List<BookingEnd> bookingEnd { get; set; }
-        public int id { get; set; }
+        [JsonConverter(typeof(CustomDateConverter))]
+        public DateTime? dates { get; set; }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//Inserted
 using System.IO;
 using Newtonsoft.Json;
 using HotelBooking.Models;
@@ -26,6 +27,10 @@ namespace HotelBooking
     {
         //To deseralize the json file
         public static ResourceType resource = JsonConvert.DeserializeObject<ResourceType>(File.ReadAllText(@"C:\Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookingData.json"));
+        //Create a list of receipt that contains a list of object thus a list in a list.
+        public static ObservableCollection<ObservableCollection<Transaction>> Details = JsonConvert.DeserializeObject<ObservableCollection<ObservableCollection<Transaction>>>(File.ReadAllText(@"C:\Users\elvis\Desktop\AppD\Assignment1\HotelBookings\HotelBooking\HotelBooking\BookedDetails.json"));
+       
+        //instantiate Cart
         public static ObservableCollection<CartItem> Cart = new ObservableCollection<CartItem>();
         
         public MainWindow()
@@ -43,15 +48,14 @@ namespace HotelBooking
             MainFrame.Content = new BallroomsPage();
         }
 
-        private void CheckOutBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-      
-        }
-
         private void TabItem_MouseUp(object sender, MouseButtonEventArgs e)
         {
             CartFrame.Content = new CartPage();
+        }
+
+        private void TabItem_MouseUp_1(object sender, MouseButtonEventArgs e)
+        {
+            ReceiptFrame.Content = new ReceiptPage();
         }
     }
 }

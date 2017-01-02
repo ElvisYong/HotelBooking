@@ -59,19 +59,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CustomDateConverter.cs" />
+    <Compile Include="Models\BookingEnd.cs" />
+    <Compile Include="Models\BookingStart.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\BallroomId.cs" />
     <Compile Include="Models\BallRoomResource.cs" />
     <Compile Include="Models\DiningResource.cs" />
     <Compile Include="Models\ResourceType.cs" />
     <Compile Include="Models\RoomId.cs" />
-    <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\TableId.cs" />
     <Compile Include="Pages\BallroomsPage.xaml.cs">
       <DependentUpon>BallroomsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CartPage.xaml.cs">
       <DependentUpon>CartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReceiptPage.xaml.cs">
+      <DependentUpon>ReceiptPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RoomsPage.xaml.cs">
       <DependentUpon>RoomsPage.xaml</DependentUpon>
@@ -85,7 +90,7 @@
     <Compile Include="Popups\DateError.xaml.cs">
       <DependentUpon>DateError.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Transaction.cs" />
+    <Compile Include="Models\Transaction.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ReceiptPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +152,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="BookingData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BookedDetails.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
