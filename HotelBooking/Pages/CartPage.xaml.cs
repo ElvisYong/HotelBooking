@@ -53,8 +53,8 @@ namespace HotelBooking.Pages
                     TransactionBookingStart = item.BookingStart,
                     TransactionBookingEnd = item.BookingEnd,
                     ItemName = item.itemName,
-                    TransactionId = item.itemId,
-                    TransactionSubtotal = item.subTotal
+                    TransactionItemId = item.itemId,
+                    TransactionSubtotal = item.subTotal,
                 });
             }
 
@@ -68,7 +68,7 @@ namespace HotelBooking.Pages
             {
                 foreach(var hotelItems in MainWindow.resource.hotelRooms)
                 {
-                    if (items.itemName.Equals("Deluxe Room"))
+                    if (items.itemName.Equals("Classic Room"))
                     {
                         foreach (var ids in hotelItems.roomId)
                         {
@@ -85,7 +85,7 @@ namespace HotelBooking.Pages
                             }
                         }
                     }
-                    if(items.itemName.Equals("Premium Room"))
+                    if(items.itemName.Equals("Deluxe Room"))
                     {
                         foreach(var ids in hotelItems.roomId)
                         {
@@ -102,7 +102,7 @@ namespace HotelBooking.Pages
                             }
                         }
                     }
-                    if (items.itemName.Equals("Family Room"))
+                    if (items.itemName.Equals("Prestige Room"))
                     {
                         foreach (var ids in hotelItems.roomId)
                         {
@@ -112,23 +112,6 @@ namespace HotelBooking.Pages
                                 {
                                     if (items.itemId == ids.id)
                                     {
-                                        start.dates = items.BookingStart;
-                                        end.dates = items.BookingEnd;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    if (items.itemName.Equals("VIP Room"))
-                    {
-                        foreach (var ids in hotelItems.roomId)
-                        {
-                            foreach (var start in ids.bookingStart)
-                            {
-                                foreach (var end in ids.bookingEnd)
-                                {
-                                    if (items.itemId == ids.id)
-                                    { 
                                         start.dates = items.BookingStart;
                                         end.dates = items.BookingEnd;
                                     }
@@ -139,7 +122,7 @@ namespace HotelBooking.Pages
                 }
                 foreach(var ballRoomItems in MainWindow.resource.ballRooms)
                 {
-                    if (items.itemName.Equals("Wedding Ballroom"))
+                    if (items.itemName.Equals("The Golden"))
                     {
                         foreach (var ids in ballRoomItems.ballroomId)
                         {
@@ -156,7 +139,7 @@ namespace HotelBooking.Pages
                             }
                         }
                     }
-                    if (items.itemName.Equals("Large Ballroom"))
+                    if (items.itemName.Equals("The Vintage"))
                     {
                         foreach (var ids in ballRoomItems.ballroomId)
                         {
@@ -173,7 +156,7 @@ namespace HotelBooking.Pages
                             }
                         }
                     }
-                    if (items.itemName.Equals("Grand Ballroom"))
+                    if (items.itemName.Equals("The Willow"))
                     {
                         foreach (var ids in ballRoomItems.ballroomId)
                         {

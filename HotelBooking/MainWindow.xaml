@@ -36,6 +36,14 @@
                             <Grid>
                             </Grid>
                         </TabItem>
+                        <TabItem x:Name="Ballroom_Copy" MouseUp="Dining_MouseUp" Margin="0,0.8,-1.2,-4.2">
+                            <TabItem.Header>
+                                <Grid Height="50" Width="80">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="Dining"/><LineBreak/><Run/></TextBlock>
+                                </Grid>
+                            </TabItem.Header>
+                            <Grid/>
+                        </TabItem>
                     </TabControl>
                     <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Margin="96,0,0,0.8"/>
                 </Grid>

@@ -10,18 +10,15 @@
       Title="RoomsPage">
 
     <Grid>
-        <DatePicker x:Name="DeluxeRoomBookingStart" HorizontalAlignment="Left" Margin="5,-2,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <DatePicker x:Name="DeluxeRoomBookingEnd" HorizontalAlignment="Left" Margin="107,-2,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <Button x:Name="DeluxeRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,3,0,0" VerticalAlignment="Top" Width="75" Click="DeluxeRoomButton_Click"/>
-        <DatePicker x:Name="PremiumRoomBookingStart" HorizontalAlignment="Left" Margin="5,22,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <DatePicker x:Name="PremiumRoomBookingEnd" HorizontalAlignment="Left" Margin="107,22,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <Button x:Name="PremiumRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,27,0,0" VerticalAlignment="Top" Width="75" Click="PremiumRoomButton_Click"/>
-        <DatePicker x:Name="FamilyRoomBookingStart" HorizontalAlignment="Left" Margin="5,46,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <DatePicker x:Name="FamilyRoomBookingEnd" HorizontalAlignment="Left" Margin="107,46,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <Button x:Name="FamilyRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,51,0,0" VerticalAlignment="Top" Width="75" Click="FamilyRoomButton_Click"/>
-        <DatePicker x:Name="VipRoomBookingStart" HorizontalAlignment="Left" Margin="5,71,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <DatePicker x:Name="VipRoomBookingEnd" HorizontalAlignment="Left" Margin="107,71,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
-        <Button x:Name="VipRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,73,0,0" VerticalAlignment="Top" Width="75" Click="VipRoomButton_Click"/>
+        <DatePicker x:Name="ClassicRoomBookingStart" HorizontalAlignment="Left" Margin="5,-2,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
+        <DatePicker x:Name="ClassicRoomBookingEnd" HorizontalAlignment="Left" Margin="107,-2,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
+        <Button x:Name="ClassicRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,3,0,0" VerticalAlignment="Top" Width="75" Click="ClassicRoomButton_Click"/>
+        <DatePicker x:Name="DeluxeRoomBookingStart" HorizontalAlignment="Left" Margin="5,22,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
+        <DatePicker x:Name="DeluxeRoomBookingEnd" HorizontalAlignment="Left" Margin="107,22,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
+        <Button x:Name="DeluxeRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,27,0,0" VerticalAlignment="Top" Width="75" Click="DeluxeRoomButton_Click"/>
+        <DatePicker x:Name="PrestigeRoomBookingStart" HorizontalAlignment="Left" Margin="5,46,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
+        <DatePicker x:Name="PrestigeRoomBookingEnd" HorizontalAlignment="Left" Margin="107,46,0,0" VerticalAlignment="Top" DisplayDateStart="{x:Static sys:DateTime.Now}" FirstDayOfWeek="Monday"/>
+        <Button x:Name="PrestigeRoomButton" Content="Add to cart" HorizontalAlignment="Left" Margin="215,51,0,0" VerticalAlignment="Top" Width="75" Click="PrestigeRoomButton_Click"/>
         <Button x:Name="button" Content="Enable buttons" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="191,208,0,0" Height="21" Click="button_Click"/>
     </Grid>
 </Page>

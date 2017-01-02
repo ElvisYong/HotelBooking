@@ -57,5 +57,10 @@ namespace HotelBooking
         {
             ReceiptFrame.Content = new ReceiptPage();
         }
+
+        private void Dining_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MainFrame.Content = new DiningPage();
+        }
     }
 }

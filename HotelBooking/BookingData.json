@@ -1,17 +1,17 @@
 {
   "hotelRooms": [
     {
-      "roomType": "Deluxe Room",
+      "roomType": "Classic Room",
       "roomId": [
         {
           "bookingStart": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "bookingEnd": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "id": 1
@@ -19,12 +19,12 @@
         {
           "bookingStart": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "bookingEnd": [
             {
-              "dates": null
+              "dates": "2017-01-02"
             }
           ],
           "id": 2
@@ -85,17 +85,17 @@
       "cost": 200.0
     },
     {
-      "roomType": "Premium Room",
+      "roomType": "Deluxe Room",
       "roomId": [
         {
           "bookingStart": [
             {
-              "dates": "2017-01-02"
+              "dates": null
             }
           ],
           "bookingEnd": [
             {
-              "dates": "2017-01-02"
+              "dates": null
             }
           ],
           "id": 7
@@ -130,7 +130,7 @@
       "cost": 250.0
     },
     {
-      "roomType": "Family Room",
+      "roomType": "Prestige Room",
       "roomId": [
         {
           "bookingStart": [
@@ -173,30 +173,11 @@
         }
       ],
       "cost": 300.0
-    },
-    {
-      "roomType": "VIP Room",
-      "roomId": [
-        {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
-          "id": 13
-        }
-      ],
-      "cost": 400.0
     }
   ],
   "ballRooms": [
     {
-      "ballroomType": "Wedding Ballroom",
+      "ballroomType": "The Golden",
       "ballroomId": [
         {
           "bookingStart": [
@@ -242,7 +223,7 @@
       "cost": 444.0
     },
     {
-      "ballroomType": "Large Ballroom",
+      "ballroomType": "The Vintage",
       "ballroomId": [
         {
           "bookingStart": [
@@ -275,7 +256,7 @@
       "cost": 500.0
     },
     {
-      "ballroomType": "Grand Ballroom",
+      "ballroomType": "The Willow",
       "ballroomId": [
         {
           "bookingStart": [
@@ -297,7 +278,7 @@
   ],
   "dining": [
     {
-      "restrauntType": "Western Buffet",
+      "restrauntType": "Western",
       "tableId": [
         {
           "bookingStart": [
@@ -381,7 +362,7 @@
       "cost": 105.0
     },
     {
-      "restrauntType": "Local Cuisine Buffet",
+      "restrauntType": "Chinese",
       "tableId": [
         {
           "bookingStart": [
@@ -465,7 +446,7 @@
       "cost": 75.0
     },
     {
-      "restrauntType": "Chinese Buffet",
+      "restrauntType": "Italian",
       "tableId": [
         {
           "bookingStart": [
@@ -547,90 +528,6 @@
         }
       ],
       "cost": 88.0
-    },
-    {
-      "restrauntType": "Japanese Cuisine Buffet",
-      "tableId": [
-        {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
-          "id": 38
-        },
-        {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
-          "id": 39
-        },
-        {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
-          "id": 40
-        },
-        {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
-          "id": 41
-        },
-        {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
-          "id": 42
-        },
-        {
-          "bookingStart": [
-            {
-              "dates": null
-            }
-          ],
-          "bookingEnd": [
-            {
-              "dates": null
-            }
-          ],
-          "id": 43
-        }
-      ],
-      "cost": 99.0
     }
   ]
 }

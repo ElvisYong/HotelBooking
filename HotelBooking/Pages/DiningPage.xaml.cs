@@ -17,49 +17,49 @@ using System.Windows.Shapes;
 namespace HotelBooking.Pages
 {
     /// <summary>
-    /// Interaction logic for BallroomsPage.xaml
+    /// Interaction logic for DiningPage.xaml
     /// </summary>
-    public partial class BallroomsPage : Page
+    public partial class DiningPage : Page
     {
-        private static string theGoldenName;
-        private static double theGoldenCost;
-        private static string theVintageName;
-        private static double theVintageCost;
-        private static string theWillowName;
-        private static double theWillowCost;
-
-        public BallroomsPage()
+        private static string westernName;
+        private static double westernCost;
+        private static string chineseName;
+        private static double chineseCost;
+        private static string italianName;
+        private static double italianCost;
+        public DiningPage()
         {
             InitializeComponent();
-            foreach (var item in MainWindow.resource.ballRooms)
+            foreach (var item in MainWindow.resource.dining)
             {
-                if (item.ballroomType.Equals("The Golden"))
+                if (item.restrauntType.Equals("Western"))
                 {
-                    theGoldenName = item.ballroomType;
-                    theGoldenCost = item.cost;
+                    westernName = item.restrauntType;
+                    westernCost = item.cost;
                 }
-                else if (item.ballroomType.Equals("The Vintage"))
+                else if (item.restrauntType.Equals("Chinese"))
                 {
-                    theVintageName = item.ballroomType;
-                    theVintageCost = item.cost;
+                    chineseName = item.restrauntType;
+                    chineseCost = item.cost;
                 }
-                else if (item.ballroomType.Equals("The Willow"))
+                else if (item.restrauntType.Equals("Italian"))
                 {
-                    theWillowName = item.ballroomType;
-                    theWillowCost = item.cost;
+                    italianName = item.restrauntType;
+                    italianCost = item.cost;
                 }
             }
         }
-        private void TheGoldenButton_Click(object sender, RoutedEventArgs e)
+
+        private void WesternButton_Click(object sender, RoutedEventArgs e)
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
             int facilityId = 0;
-            foreach (var item in MainWindow.resource.ballRooms)
+            foreach (var item in MainWindow.resource.dining)
             {
-                if (item.ballroomType.Equals("The Golden"))
+                if (item.restrauntType.Equals("Western"))
                 {
-                    foreach (var ids in item.ballroomId)
+                    foreach (var ids in item.tableId)
                     {
                         foreach (var start in ids.bookingStart)
                         {
@@ -71,10 +71,10 @@ namespace HotelBooking.Pages
                                     facilityId = ids.id;
                                     break;
                                 }
-                                else if (TheGoldenBookingStart.SelectedDate.Equals(start.dates)
-                                    || TheGoldenBookingStart.SelectedDate > start.dates && TheGoldenBookingStart.SelectedDate < end.dates
-                                    || TheGoldenBookingEnd.SelectedDate > start.dates && TheGoldenBookingEnd.SelectedDate < end.dates
-                                    || TheGoldenBookingEnd.SelectedDate.Equals(end.dates))
+                                else if (WesternBookingStart.SelectedDate.Equals(start.dates)
+                                    || WesternBookingStart.SelectedDate > start.dates && WesternBookingStart.SelectedDate < end.dates
+                                    || WesternBookingEnd.SelectedDate > start.dates && WesternBookingEnd.SelectedDate < end.dates
+                                    || WesternBookingEnd.SelectedDate.Equals(end.dates))
                                 {
                                     bookingFull = true;
                                 }
@@ -85,7 +85,7 @@ namespace HotelBooking.Pages
                 }
             }
             //when booking dates not chosen, user is alerted to select the dates
-            if (TheGoldenBookingStart.SelectedDate == null || TheGoldenBookingEnd.SelectedDate == null)
+            if (WesternBookingStart.SelectedDate == null || WesternBookingEnd.SelectedDate == null)
             {
                 Popups.BookingEntryNull Popup = new Popups.BookingEntryNull();
                 Popup.Show();
@@ -97,7 +97,7 @@ namespace HotelBooking.Pages
                 PopupFull.Show();
             }
             //When booking start date is before end date, prompt user about it
-            else if (TheGoldenBookingEnd.SelectedDate < TheGoldenBookingStart.SelectedDate)
+            else if (WesternBookingEnd.SelectedDate < WesternBookingStart.SelectedDate)
             {
                 Popups.DateError BookingError = new Popups.DateError();
                 BookingError.Show();
@@ -108,27 +108,27 @@ namespace HotelBooking.Pages
                 //Add to cart
                 CartItem Item = new CartItem()
                 {
-                    itemName = theGoldenName,
-                    BookingStart = TheGoldenBookingStart.SelectedDate.Value,
-                    BookingEnd = TheGoldenBookingEnd.SelectedDate.Value,
-                    cost = theGoldenCost,
+                    itemName = westernName,
+                    BookingStart = WesternBookingStart.SelectedDate.Value,
+                    BookingEnd = WesternBookingEnd.SelectedDate.Value,
+                    cost = westernCost,
                     itemId = facilityId
                 };
                 MainWindow.Cart.Add(Item);
-                TheGoldenButton.IsEnabled = false;
+                WesternButton.IsEnabled = false;
             }
         }
 
-        private void TheVintageButton_Click(object sender, RoutedEventArgs e)
+        private void ChineseButton_Click(object sender, RoutedEventArgs e)
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
             int facilityId = 0;
-            foreach (var item in MainWindow.resource.ballRooms)
+            foreach (var item in MainWindow.resource.dining)
             {
-                if (item.ballroomType.Equals("The Vintage"))
+                if (item.restrauntType.Equals("Chinese"))
                 {
-                    foreach (var ids in item.ballroomId)
+                    foreach (var ids in item.tableId)
                     {
                         foreach (var start in ids.bookingStart)
                         {
@@ -140,10 +140,10 @@ namespace HotelBooking.Pages
                                     facilityId = ids.id;
                                     break;
                                 }
-                                else if (TheVintageBookingStart.SelectedDate.Equals(start.dates)
-                                    || TheVintageBookingStart.SelectedDate > start.dates && TheVintageBookingStart.SelectedDate < end.dates
-                                    || TheVintageBookingEnd.SelectedDate > start.dates && TheVintageBookingEnd.SelectedDate < end.dates
-                                    || TheVintageBookingEnd.SelectedDate.Equals(end.dates))
+                                else if (ChineseBookingStart.SelectedDate.Equals(start.dates)
+                                    || ChineseBookingStart.SelectedDate > start.dates && ChineseBookingStart.SelectedDate < end.dates
+                                    || ChineseBookingEnd.SelectedDate > start.dates && ChineseBookingEnd.SelectedDate < end.dates
+                                    || ChineseBookingEnd.SelectedDate.Equals(end.dates))
                                 {
                                     bookingFull = true;
                                 }
@@ -154,65 +154,65 @@ namespace HotelBooking.Pages
                 }
             }
             //when booking dates not chosen, user is alerted to select the dates
-            if (TheVintageBookingStart.SelectedDate == null || TheVintageBookingEnd.SelectedDate == null)
+            if (ChineseBookingStart.SelectedDate == null || ChineseBookingEnd.SelectedDate == null)
             {
                 Popups.BookingEntryNull Popup = new Popups.BookingEntryNull();
                 Popup.Show();
             }
-            //calls scheduler methods to check if booking is full on selected dates
+            //Check if booking is full on selected dates for all selected facilities
             else if (bookingFull == true)
             {
                 Popups.BookingFull PopupFull = new Popups.BookingFull();
                 PopupFull.Show();
             }
             //When booking start date is before end date, prompt user about it
-            else if (TheVintageBookingEnd.SelectedDate < TheVintageBookingStart.SelectedDate)
+            else if (ChineseBookingEnd.SelectedDate < ChineseBookingStart.SelectedDate)
             {
                 Popups.DateError BookingError = new Popups.DateError();
                 BookingError.Show();
             }
-            //Add to Cart
+            //Add item to Cart
             else
             {
                 //Add to cart
                 CartItem Item = new CartItem()
                 {
-                    itemName = theVintageName,
-                    BookingStart = TheVintageBookingStart.SelectedDate.Value,
-                    BookingEnd = TheVintageBookingEnd.SelectedDate.Value,
-                    cost = theVintageCost,
+                    itemName = chineseName,
+                    BookingStart = ChineseBookingStart.SelectedDate.Value,
+                    BookingEnd = ChineseBookingEnd.SelectedDate.Value,
+                    cost = chineseCost,
                     itemId = facilityId
                 };
                 MainWindow.Cart.Add(Item);
-                TheVintageButton.IsEnabled = false;
+                ChineseButton.IsEnabled = false;
             }
         }
 
-        private void TheWillowButton_Click(object sender, RoutedEventArgs e)
+        private void ItalianButton_Click(object sender, RoutedEventArgs e)
         {
             //scheduler to loop through all the room ids to check for availability
             bool bookingFull = false;
             int facilityId = 0;
-            foreach (var item in MainWindow.resource.ballRooms)
+            foreach (var item in MainWindow.resource.dining)
             {
-                if (item.ballroomType.Equals("The Willow"))
+                if (item.restrauntType.Equals("Italian"))
                 {
-                    foreach (var ids in item.ballroomId)
+                    foreach (var ids in item.tableId)
                     {
                         foreach (var start in ids.bookingStart)
                         {
                             foreach (var end in ids.bookingEnd)
                             {
-                                if (ids.bookingStart == null)
+                                if (start.dates == null && end.dates == null)
                                 {
                                     bookingFull = false;
                                     facilityId = ids.id;
                                     break;
                                 }
-                                else if (TheWillowBookingStart.SelectedDate.Equals(start.dates)
-                                    || TheWillowBookingStart.SelectedDate > start.dates && TheWillowBookingStart.SelectedDate < end.dates
-                                    || TheWillowBookingEnd.SelectedDate > start.dates && TheWillowBookingEnd.SelectedDate < end.dates
-                                    || TheWillowBookingEnd.SelectedDate.Equals(end.dates))
+                                else if (ItalianBookingStart.SelectedDate.Equals(start.dates)
+                                    || ItalianBookingStart.SelectedDate > start.dates && ItalianBookingStart.SelectedDate < end.dates
+                                    || ItalianBookingEnd.SelectedDate > start.dates && ItalianBookingEnd.SelectedDate < end.dates
+                                    || ItalianBookingEnd.SelectedDate.Equals(end.dates))
                                 {
                                     bookingFull = true;
                                 }
@@ -223,46 +223,46 @@ namespace HotelBooking.Pages
                 }
             }
             //when booking dates not chosen, user is alerted to select the dates
-            if (TheWillowBookingStart.SelectedDate == null || TheWillowBookingEnd.SelectedDate == null)
+            if (ItalianBookingStart.SelectedDate == null || ItalianBookingEnd.SelectedDate == null)
             {
                 Popups.BookingEntryNull Popup = new Popups.BookingEntryNull();
                 Popup.Show();
             }
-            //calls scheduler methods to check if booking is full on selected dates
+            //Check if booking is full on selected dates for all selected facilities
             else if (bookingFull == true)
             {
                 Popups.BookingFull PopupFull = new Popups.BookingFull();
                 PopupFull.Show();
             }
             //When booking start date is before end date, prompt user about it
-            else if (TheWillowBookingEnd.SelectedDate < TheWillowBookingStart.SelectedDate)
+            else if (ItalianBookingEnd.SelectedDate < ItalianBookingStart.SelectedDate)
             {
                 Popups.DateError BookingError = new Popups.DateError();
                 BookingError.Show();
             }
-            //Add to Cart
+            //Add item to Cart
             else
             {
                 //Add to cart
                 CartItem Item = new CartItem()
                 {
-                    itemName = theWillowName,
-                    BookingStart = TheWillowBookingStart.SelectedDate.Value,
-                    BookingEnd = TheWillowBookingEnd.SelectedDate.Value,
-                    cost = theWillowCost,
+                    itemName = italianName,
+                    BookingStart = ItalianBookingStart.SelectedDate.Value,
+                    BookingEnd = ItalianBookingEnd.SelectedDate.Value,
+                    cost = italianCost,
                     itemId = facilityId
                 };
                 MainWindow.Cart.Add(Item);
-                TheWillowButton.IsEnabled = false;
+                ItalianButton.IsEnabled = false;
             }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.Cart.Clear();
-            TheGoldenButton.IsEnabled = true;
-            TheVintageButton.IsEnabled = true;
-            TheWillowButton.IsEnabled = true;
+            WesternButton.IsEnabled = true;
+            ChineseButton.IsEnabled = true;
+            ItalianButton.IsEnabled = true;
         }
     }
 }

@@ -17,7 +17,7 @@
                         <TextBlock Text="{Binding TransactionBookingStart, StringFormat=Booking start: {0:D}}"/>
                         <TextBlock Text="{Binding TransactionBookingEnd, StringFormat=Booking end: {0:D}}"/>
                         <TextBlock Text="{Binding TransactionCost, StringFormat=Cost per day: {0}}"/>
-                        <TextBlock Text="{Binding TransactionId, StringFormat=Item Id: {0}}"/>
+                        <TextBlock Text="{Binding TransactionItemId, StringFormat=Item Id: {0}}"/>
                         <TextBlock Text="{Binding TransactionDateTime, StringFormat= Transaction date time: {0:f}}"/>
                     </StackPanel>
                 </DataTemplate>
@@ -26,5 +26,6 @@
         <TextBlock Name="ReceiptCostTB" HorizontalAlignment="Left" Margin="77,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock Name="totalCostTB" HorizontalAlignment="Left" Margin="77,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Clear receipt" HorizontalAlignment="Left" Margin="203,250,0,0" VerticalAlignment="Top" Width="78" Height="19" Click="button_Click"/>
+        <Button x:Name="PrintReceipt" Content="Print receipt" HorizontalAlignment="Right" Margin="0,225,19,0" VerticalAlignment="Top" Width="78" Click="PrintReceipt_Click"/>
     </Grid>
 </Page>
