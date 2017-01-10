@@ -5,32 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelBooking"
         mc:Ignorable="d"
-        Title="Grandtel Booking Application" Height="900" Width="1280" MinWidth="900" MinHeight="600"
+        Icon="./Logo/GrandtelIcon.png"
+        Title="Grandtel Booking Application" Height="800" Width="1280" MinWidth="900" MinHeight="600"
         Background="{DynamicResource Backdrop}" TextBlock.Foreground="{DynamicResource CardTextColor}"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl Background="{DynamicResource Backdrop}" BorderBrush="{DynamicResource Backdrop}" Margin="0,1,0,0">
-            <TabItem Header="Booking" Style="{StaticResource TopNav}">
-                <Grid>
-                    <TabControl TabStripPlacement="Left" Margin="-3,-2,-3,-3" BorderThickness="0" Background="{DynamicResource Backdrop}">
-                        <TabItem x:Name="Rooms" Style="{StaticResource SideNav}" Header="Rooms" MouseUp="Rooms_MouseUp"/>
-                        <TabItem x:Name="Ballroom" Style="{StaticResource SideNav}" Header="Ballrooms" MouseUp="Ballroom_MouseUp"/>
-                        <TabItem x:Name="Buffet" Style="{StaticResource SideNav}" Header="Buffets" MouseUp="Buffet_MouseUp"/>
-                    </TabControl>
-                    <Frame x:Name="Main" Margin="102,0,-3,-3" NavigationUIVisibility="Hidden"></Frame>
-                </Grid>
+            <TabItem Header="Booking" Style="{StaticResource TopNav}" MouseUp="TabItem_MouseUp">
+                <local:BookingView />
             </TabItem>
-            <TabItem Header="Cart" Style="{StaticResource TopNav}">
-                <Grid>
-                    <TextBlock>Cart</TextBlock>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Settings" Style="{StaticResource TopNav}">
-                <Grid>
-                    <TextBlock>Settings</TextBlock>
-                    <ComboBox x:Name="cboTheme" Width="100" Height="22" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" Grid.Column="3" SelectionChanged="cboTheme_SelectionChanged"/>
-                </Grid>
+            <TabItem x:Name="CartTab" Header="Cart" Style="{StaticResource TopNav}" MouseUp="CartTab_MouseUp"/>
+            <TabItem x:Name="ReceiptTab" Header="Receipt" Style="{StaticResource  TopNav}" MouseUp="ReceiptTab_MouseUp"/>
+            <TabItem Header="Settings" Style="{StaticResource  TopNav}" MouseUp="TabItem_MouseUp">
+                <local:SettingsView Margin="-1,0,-3,-3"/>
             </TabItem>
         </TabControl>
+        <Frame x:Name="TabFrame" Margin="2,56,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -1,90 +1,443 @@
-﻿{
-  "facilities": [
+{
+  "hotelRooms": [
     {
-      "hotelRooms": [
+      "roomType": "Classic Room",
+      "roomId": [
         {
-          "roomType": "Deluxe Room",
-          "availability": 120,
-          "cost": 200
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 1
         },
         {
-          "roomType": "Premium Room",
-          "availability": 80,
-          "cost": 250
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 2
         },
         {
-          "roomType": "Family Room",
-          "availability": 50,
-          "cost": 300
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 3
         },
         {
-          "roomType": "VIP Room",
-          "availability": 30,
-          "cost": 400
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 4
+        },
+        {
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 5
+        },
+        {
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 6
         }
-      ]
+      ],
+      "cost": 200.0
     },
     {
-      "suites": [
+      "roomType": "Deluxe Room",
+      "roomId": [
         {
-          "suiteType": "Deluxe Suite",
-          "availability": 50,
-          "cost": 400
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 7
         },
         {
-          "suiteType": "Premir Suite",
-          "availability": 35,
-          "cost": 500
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 8
         },
         {
-          "suiteType": "Grand Suite",
-          "availability": 15,
-          "cost": 635
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 9
         }
-      ]
+      ],
+      "cost": 250.0
     },
     {
-      "ballRooms": [
+      "roomType": "Prestige Room",
+      "roomId": [
         {
-          "ballroomType": "Wedding Ballroom",
-          "availability": 10,
-          "cost": 444
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 10
         },
         {
-          "ballroomType": "Large Ballroom",
-          "availability": 5,
-          "cost": 500
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 11
         },
         {
-          "ballroomType": "Grand Ballroom",
-          "availability": 3,
-          "cost": 555
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 12
         }
-      ]
+      ],
+      "cost": 300.0
+    }
+  ],
+  "ballRooms": [
+    {
+      "ballroomType": "The Golden",
+      "ballroomId": [
+        {
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 14
+        },
+        {
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 15
+        },
+        {
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 16
+        }
+      ],
+      "availability": 0,
+      "cost": 444.0
     },
     {
-      "dining": [
+      "ballroomType": "The Vintage",
+      "ballroomId": [
         {
-          "restrauntType": "Western Buffet",
-          "availability": 75,
-          "cost": 105
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 17
         },
         {
-          "restrauntType": "Local Cuisine Buffet",
-          "availability": 85,
-          "cost": 75
-        },
-        {
-          "restrauntType": "Chinese Buffet",
-          "availability": 100,
-          "cost": 88
-        },
-        {
-          "restrauntType": "Japanese Cuisine Buffet",
-          "availability": 55,
-          "cost": 99
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 18
         }
-      ]
+      ],
+      "availability": 0,
+      "cost": 500.0
+    },
+    {
+      "ballroomType": "The Willow",
+      "ballroomId": [
+        {
+          "bookingStart": [
+            {
+              "dates": null
+            }
+          ],
+          "bookingEnd": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 19
+        }
+      ],
+      "availability": 0,
+      "cost": 555.0
+    }
+  ],
+  "dining": [
+    {
+      "restrauntType": "Western",
+      "tableId": [
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 20
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 21
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 22
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 23
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 24
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 25
+        }
+      ],
+      "cost": 105.0
+    },
+    {
+      "restrauntType": "Chinese",
+      "tableId": [
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 26
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 27
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 28
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 29
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 30
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 31
+        }
+      ],
+      "cost": 75.0
+    },
+    {
+      "restrauntType": "Italian",
+      "tableId": [
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 32
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 33
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 34
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 35
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 36
+        },
+        {
+          "bookings": [
+            {
+              "dates": null
+            }
+          ],
+          "id": 37
+        }
+      ],
+      "cost": 88.0
     }
   ]
 }

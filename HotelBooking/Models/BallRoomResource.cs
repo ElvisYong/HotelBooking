@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelBooking.JsonProperties
+namespace HotelBooking.Models
 {
-    class BallRoomResource
+    public class BallRoomResource
     {
         public string ballroomType { get; set; }
+        public List<BallroomId> ballroomId { get; set; }
         public int availability { get; set; }
-        public int cost { get; set; }
+        public double cost { get; set; }
     }
 }

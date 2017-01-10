@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelBooking"
         mc:Ignorable="d"
+        Icon="./Logo/GrandtelIcon.png"
         WindowStartupLocation="CenterScreen"
         Title="Grandtel Booking Application" MinHeight="500" MinWidth="500" MaxHeight="500" MaxWidth="500">
     <Grid>
@@ -23,9 +24,9 @@
         <Image Source="Logo/GrandtelLogo.jpg" Grid.ColumnSpan="2"/>
         <Label x:Name="ErrorMessage" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" Foreground="Red" Visibility="Hidden">Incorrect username or password!</Label>
         <Label Grid.Row="2" HorizontalContentAlignment="Right">Username:</Label>
-        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Left" Width="300" Grid.Row="2" Grid.Column="1" KeyDown="EnterPressed"></TextBox>
+        <TextBox x:Name="UsernameTextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="300" Grid.Row="2" Grid.Column="1" KeyDown="EnterPressed"></TextBox>
         <Label Grid.Row="3" HorizontalContentAlignment="Right">Password:</Label>
-        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Width="300" Grid.Row="3" Grid.Column="1" KeyDown="EnterPressed"></PasswordBox>
+        <PasswordBox x:Name="PasswordTextBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="300" Grid.Row="3" Grid.Column="1" KeyDown="EnterPressed"></PasswordBox>
         <Label Grid.Row="4" HorizontalContentAlignment="Right">Start-up Theme:</Label>
         <ComboBox x:Name="LoginCboBox" HorizontalAlignment="Left" Width="300" SelectionChanged="LoginCboBox_SelectionChanged" Grid.Column="1" Grid.Row="4"/>
         <Button x:Name="LoginButton" Content="Login" Grid.Row="5" Grid.ColumnSpan="2" Width="70" Height="30" Margin="10" Click="LoginButton_Click"/>

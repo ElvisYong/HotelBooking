@@ -45,5 +45,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="DatePickerTextBox">
+            <Setter Property="Text" Value="Watermark Text"/>
+        </Style>
     </Application.Resources>
 </Application>

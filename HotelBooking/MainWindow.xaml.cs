@@ -1,4 +1,9 @@
-﻿using System;
+﻿using HotelBooking.MainNavItems;
+using HotelBooking.Models;
+using Newtonsoft.Json;
+using System;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -9,37 +14,35 @@ namespace HotelBooking
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static ThemeManager manager = new ThemeManager();
-        Page rooms = new Pages.Rooms();
-        Page ballrooms = new Pages.Ballrooms();
-        Page buffets = new Pages.Buffets();
+        //To deseralize the json file
+        //NEED TO USE DIRECT PATH TO READ WRITE FILE
+        public static ResourceType resource = JsonConvert.DeserializeObject<ResourceType>(File.ReadAllText(@"BookingData.json"));
+        //Create a list of receipt that contains a list of object thus a list in a list.
+        public static ObservableCollection<ObservableCollection<Transaction>> Details = JsonConvert.DeserializeObject<ObservableCollection<ObservableCollection<Transaction>>>(File.ReadAllText(@"BookedDetails.json"));
+
+        //Instantiate Cart
+        public static ObservableCollection<CartItem> Cart = new ObservableCollection<CartItem>();
 
         public MainWindow()
         {
             InitializeComponent();
-            Main.Source = new Uri("/HotelBooking;component/Pages/Rooms.xaml", UriKind.Relative);
-            cboTheme.ItemsSource = manager.CapitalThemeNameList;
-            cboTheme.SelectedItem = Login.themeName;
         }
 
-        private void Rooms_MouseUp(object sender, MouseButtonEventArgs e)
+        private void CartTab_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Main.Source = new Uri("/HotelBooking;component/Pages/Rooms.xaml", UriKind.Relative);
+            CartPage cartP = new CartPage();
+            TabFrame.Content = cartP;
         }
 
-        private void Ballroom_MouseUp(object sender, MouseButtonEventArgs e)
+        private void ReceiptTab_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Main.Source = new Uri("/HotelBooking;component/Pages/Ballrooms.xaml", UriKind.Relative);
+            ReceiptPage receiptP = new ReceiptPage();
+            TabFrame.Content = receiptP;
         }
 
-        private void Buffet_MouseUp(object sender, MouseButtonEventArgs e)
+        private void TabItem_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Main.Source = new Uri("/HotelBooking;component/Pages/Buffets.xaml", UriKind.Relative);
-        }
-
-        private void cboTheme_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            manager.SetTheme(cboTheme.SelectedValue.ToString().ToLower());
+            TabFrame.Content = null;
         }
     }
 }

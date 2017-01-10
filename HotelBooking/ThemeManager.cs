@@ -9,9 +9,6 @@ using System.Windows;
 
 namespace HotelBooking
 {
-    /// <summary>
-    /// Custom theme manager.
-    /// </summary>
     public class ThemeManager
     {
         /// <summary>
@@ -47,10 +44,16 @@ namespace HotelBooking
             string resourceFileName = assembly.GetName().Name + ".g.resources";
 
             // Open the manifest stream.
-            using (Stream stream = assembly.GetManifestResourceStream(resourceFileName))
+            var resourceStream = assembly.GetManifestResourceStream(resourceFileName);
+
+            if (resourceStream == null)
+            {
+                return new List<string>();
+            }
+            else
             {
                 // Open a resource reader to get all the resource files.
-                using (ResourceReader reader = new ResourceReader(stream))
+                using (ResourceReader reader = new ResourceReader(resourceStream))
                 {
                     // Returns just the resources that start in the themes folder
                     return new List<string>(reader.Cast<DictionaryEntry>()
@@ -58,7 +61,7 @@ namespace HotelBooking
                         .Select(entry => entry.Key.ToString().Replace(".baml", "").Replace("themes/", "")) // select the name without .baml or themes/
                         .OrderBy(entry => entry.ToString()).ToArray()); // put it in alpha order.
                 }
-            }
+            }          
         }
 
         /// <summary>

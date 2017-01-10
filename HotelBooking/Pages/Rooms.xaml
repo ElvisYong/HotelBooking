@@ -19,8 +19,8 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Image Source="/HotelBooking;component/RoomPictures/ClassicRoom.jpg" Height="250" Margin="20" VerticalAlignment="Top" MouseUp="ClassicRoom_MouseUp"/>
-            <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Column="1" Cursor="Hand">
+            <Image Source="/HotelBooking;component/RoomPictures/ClassicRoom.jpg" Height="250" Margin="20" VerticalAlignment="Top" Cursor="Hand" MouseUp="ClassicRoom_MouseUp"/>
+            <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Column="1">
                     <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="ClassicRoom_MouseUp">
                     Classic Room
                     </Span><LineBreak/>
@@ -28,16 +28,19 @@
                     Their exquisite design incorporates fine fabrics and beautiful woodworks. Modern luxuries include master controlled lighting and climate control,
                     Wi-Fi, Bang and Olufsen televisions. Revel in the sleek new bathrooms decorated in white and woody hues, we are sure you will enjoy your stay.
             </TextBlock>
-            <Image Source="/HotelBooking;component/RoomPictures/DeluxeRoom.jpg" Height="250" Margin="20" Grid.Row="1" VerticalAlignment="Top"/>
+            <Image Source="/HotelBooking;component/RoomPictures/DeluxeRoom.jpg" Height="250" Margin="20" Grid.Row="1" VerticalAlignment="Top" Cursor="Hand" MouseUp="DeluxeRoom_MouseUp"/>
             <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Row="1" Grid.Column="1">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">Deluxe Room</Span><LineBreak/>
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="DeluxeRoom_MouseUp">
+                    Deluxe Room
+                    </Span><LineBreak/>
                     Your dream escape awaits at Grandtel. The Deluxe Room welcomes you with warm, earth toned furnishings and abundant natural 
                     light from the large balcony windows. The queen size bed will be a serene place to rest your tired body at the end of the day.
                     A huge hot tub will also help you in your rest as you relax in the large bath much like the hot springs in Japan.
             </TextBlock>
-            <Image Source="/HotelBooking;component/RoomPictures/PretigeRoom.jpg" Height="250" Margin="20" Grid.Row="2" VerticalAlignment="Top"/>
+            <Image Source="/HotelBooking;component/RoomPictures/PrestigeRoom.jpg" Height="250" Margin="20" Grid.Row="2" VerticalAlignment="Top" Cursor="Hand" MouseUp="PrestigeRoom_MouseUp"/>
             <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Row="2" Grid.Column="1">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">Prestige Rooms</Span><LineBreak/>
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="PrestigeRoom_MouseUp">
+                    Prestige Rooms</Span><LineBreak/>
                     These sophisticated and elegant Prestige Rooms at Grandtel are decorated with timeless Italian furnishings. With soaring ceilings and tall windows,
                     which have been designed to make the most of the natural daylight. Enjoy fine fabrics and exquisite design. 
             </TextBlock>

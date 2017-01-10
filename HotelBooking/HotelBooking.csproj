@@ -59,19 +59,83 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="JsonProperties\BallRoomResource.cs" />
-    <Compile Include="JsonProperties\DiningResource.cs" />
-    <Compile Include="JsonProperties\FacilityType.cs" />
-    <Compile Include="JsonProperties\ResourceType.cs" />
-    <Compile Include="JsonProperties\SuiteResource.cs" />
+    <Compile Include="CustomDateConverter.cs" />
+    <Compile Include="Layout\BuffetLayoutPage.xaml.cs">
+      <DependentUpon>BuffetLayoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\BuffetLongerGrid.xaml.cs">
+      <DependentUpon>BuffetLongerGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\BuffetShorterGrid.xaml.cs">
+      <DependentUpon>BuffetShorterGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\LayoutPage.xaml.cs">
+      <DependentUpon>LayoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainNavItems\CartPage.xaml.cs">
+      <DependentUpon>CartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainNavItems\BookingView.xaml.cs">
+      <DependentUpon>BookingView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Rooms\Classic.xaml.cs">
-      <DependentUpon>Classic.xaml</DependentUpon>
+    <Compile Include="MainNavItems\ReceiptPage.xaml.cs">
+      <DependentUpon>ReceiptPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BallroomId.cs" />
+    <Compile Include="Models\BallRoomResource.cs" />
+    <Compile Include="Models\BookingEnd.cs" />
+    <Compile Include="Models\Bookings.cs" />
+    <Compile Include="Models\BookingStart.cs" />
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\DiningResource.cs" />
+    <Compile Include="Models\HotelResource.cs" />
+    <Compile Include="Models\ResourceType.cs" />
+    <Compile Include="Models\RoomId.cs" />
+    <Compile Include="Models\TableId.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Pages\Model.cs" />
+    <Compile Include="MainNavItems\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\LongerGrid.xaml.cs">
+      <DependentUpon>LongerGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ShorterGrid.xaml.cs">
+      <DependentUpon>ShorterGrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThemeManager.cs" />
+    <Page Include="Layout\BuffetLayoutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layout\BuffetLongerGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layout\BuffetShorterGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layout\LayoutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainNavItems\CartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainNavItems\BookingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainNavItems\ReceiptPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -83,7 +147,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="JsonProperties\HotelResource.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -100,7 +163,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Rooms\Classic.xaml">
+    <Page Include="MainNavItems\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layout\LongerGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layout\ShorterGrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -145,22 +216,25 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Resource Include="Logo\GrandtelLogo.jpg" />
-    <Resource Include="RoomPictures\PretigeRoom.jpg" />
+    <Resource Include="RoomPictures\PrestigeRoom.jpg" />
     <Resource Include="RoomPictures\DeluxeRoom.jpg" />
     <Resource Include="RoomPictures\ClassicRoom.jpg" />
     <Resource Include="BuffetPictures\Italian.jpg" />
-    <Resource Include="BuffetPictures\ClassicBuffet.jpg" />
     <Resource Include="BuffetPictures\Chinese.jpg" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Resource Include="BallroomPictures\TheGolden.jpg" />
     <Resource Include="BallroomPictures\TheVintage.jpg" />
     <Resource Include="BallroomPictures\TheWillow.jpg" />
-    <Content Include="BookingData.json">
+    <None Include="BookedDetails.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </None>
+    <None Include="BookingData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -170,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BuffetPictures\Western.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo\GrandtelIcon.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

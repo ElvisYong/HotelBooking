@@ -20,23 +20,26 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Image Source="/HotelBooking;component/BuffetPictures/ClassicBuffet.jpg" Height="250" Margin="20" VerticalAlignment="Top"/>
+            <Image Source="/HotelBooking;component/BuffetPictures/Western.jpg" Height="250" Margin="20" VerticalAlignment="Top" Cursor="Hand" MouseUp="Western_MouseUp"/>
             <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Column="1">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">Western</Span><LineBreak/>
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="Western_MouseUp">
+                    Western</Span><LineBreak/>
                     Western serves Western cuisines from Apple Pies to Mac N Cheese. This buffet serves delicious cuisine from all over the 50 States in 
                     the United States. The environment is very soothing and relaxing, designed to look remind you of America, you will surely enjoy it as 
-                    you eat your meal. 
+                    you eat your meal.
             </TextBlock>
-            <Image Source="/HotelBooking;component/BuffetPictures/Chinese.jpg" Height="250" Margin="20" Grid.Row="1" VerticalAlignment="Top"/>
+            <Image Source="/HotelBooking;component/BuffetPictures/Chinese.jpg" Height="250" Margin="20" Grid.Row="1" VerticalAlignment="Top" Cursor="Hand" MouseUp="Chinese_MouseUp"/>
             <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Row="1" Grid.Column="1">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">Chinese</Span><LineBreak/>
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="Chinese_MouseUp">
+                    Chinese</Span><LineBreak/>
                     Grandtel's Chinese Buffet is filled with many Chinese delicacies and is also aptly decorated with decors from China. The surroundings will 
                     make you feel as though you are in China eating. We serve many Chinese foods like Xiao Long Bao and Chow Mien. If you are a fan of Chinese food, 
                     then we are sure that you will enjoy your meal at Grandtel's Chinese Buffet.
             </TextBlock>
-            <Image Source="/HotelBooking;component/BuffetPictures/Italian.jpg" Height="250" Margin="20" Grid.Row="2" VerticalAlignment="Top"/>
+            <Image Source="/HotelBooking;component/BuffetPictures/Italian.jpg" Height="250" Margin="20" Grid.Row="2" VerticalAlignment="Top" Cursor="Hand" MouseUp="Italian_MouseUp"/>
             <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Row="2" Grid.Column="1">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">Italian</Span><LineBreak/>
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="Italian_MouseUp">
+                    Italian</Span><LineBreak/>
                     Our Italian Buffet draws inspiration from Italy's finest restaurants. It is decorated to look like one too! With pictures and decors representing Italy. 
                     The food that we serve here are delicacies of Italy from Pasta to Pizza. Our Pasta that we serve are also made fresh daily and taste very good.
                     We are sure that you will enjoy your meal here.

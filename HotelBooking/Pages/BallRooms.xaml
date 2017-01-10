@@ -19,23 +19,26 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
-            <Image Source="/HotelBooking;component/BallroomPictures/TheGolden.jpg" Height="250" Margin="20" VerticalAlignment="Top"/>
-            <TextBlock x:Name="Golden" Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Column="1" MouseDown="Golden_MouseDown">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">The Golden</Span><LineBreak/>
+            <Image Source="/HotelBooking;component/BallroomPictures/TheGolden.jpg" Height="250" Margin="20" VerticalAlignment="Top" Cursor="Hand" MouseUp="Golden_MouseUp"/>
+            <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Column="1">
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="Golden_MouseUp">
+                    The Golden</Span><LineBreak/>
                     The Golden is a ballroom perfect for any event you are planning to host. As the name implies, the room is mostly decorated in gold.
                     With gold chandeliers and paintings. The walls are also painted a shade of gold. It was a surround sound system for musics to be played
                     and a stage too, perfect for any performances or talks. A mouth watering course meal can also be ordered for event-goers.
             </TextBlock>
-            <Image Source="/HotelBooking;component/BallroomPictures/TheVintage.jpg" Height="250" Margin="20" Grid.Row="1" VerticalAlignment="Top"/>
+            <Image Source="/HotelBooking;component/BallroomPictures/TheVintage.jpg" Height="250" Margin="20" Grid.Row="1" VerticalAlignment="Top" Cursor="Hand" MouseUp="Vintage_MouseUp"/>
             <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Row="1" Grid.Column="1">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">The Vintage</Span><LineBreak/>
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="Vintage_MouseUp">
+                    The Vintage</Span><LineBreak/>
                     Grandtel's The Vintage is a great place to hold many events, be it weddings, business related or even just any form of celebrations. Our white 
                     themed ballroom has bright lightings, surround sound and a stage for any talks or performances. There is also a piano which can be brought out 
                     if needed. A mouth watering course meal can also be ordered for event-goers.
             </TextBlock>
-            <Image Source="/HotelBooking;component/BallroomPictures/TheWillow.jpg" Height="250" Margin="20" Grid.Row="2" VerticalAlignment="Top"/>
+            <Image Source="/HotelBooking;component/BallroomPictures/TheWillow.jpg" Height="250" Margin="20" Grid.Row="2" VerticalAlignment="Top" Cursor="Hand" MouseUp="Willow_MouseUp"/>
             <TextBlock Margin="20" FontSize="15" TextWrapping="Wrap" TextAlignment="Justify" Grid.Row="2" Grid.Column="1">
-                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}">The Willow</Span><LineBreak/>
+                    <Span FontWeight="Bold" TextDecorations="Underline" FontSize="20" Foreground="{DynamicResource FrameHeaderTextColor}" Cursor="Hand" MouseUp="Willow_MouseUp">
+                    The Willow</Span><LineBreak/>
                     The Willow, a nice place to relax and talk about the good ol' times. The wood surroundings will surely make you feel relaxed during your stay for 
                     the event. The chandeliers will provide ample lighting for the place during the event. It was a surround sound system for musics to be played
                     and a stage too, perfect for any performances or talks. A mouth watering course meal can also be ordered for event-goers.
