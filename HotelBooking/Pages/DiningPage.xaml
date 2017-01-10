@@ -1,0 +1,20 @@
+﻿<Page x:Class="HotelBooking.Pages.DiningPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotelBooking.Pages"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="DiningPage">
+
+    <Grid>
+        <DatePicker x:Name="WesternBooking" HorizontalAlignment="Left" Margin="68,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.32,0.328" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+        <Button x:Name="WesternButton" Content="Add to cart" HorizontalAlignment="Left" Margin="209,27,0,0" VerticalAlignment="Top" Width="75" Click="WesternButton_Click"/>
+        <DatePicker x:Name="ChineseBooking" HorizontalAlignment="Left" Margin="68,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.32,0.328" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+        <Button x:Name="ChineseButton" Content="Add to cart" HorizontalAlignment="Left" Margin="209,56,0,0" VerticalAlignment="Top" Width="75" Click="ChineseButton_Click"/>
+        <DatePicker x:Name="ItalianBooking" HorizontalAlignment="Left" Margin="68,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.32,0.328" DisplayDateStart="{x:Static sys:DateTime.Now}"/>
+        <Button x:Name="ItalianButton" Content="Add to cart" HorizontalAlignment="Left" Margin="209,85,0,0" VerticalAlignment="Top" Width="75" Click="ItalianButton_Click"/>
+    </Grid>
+</Page>
